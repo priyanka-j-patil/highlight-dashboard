@@ -1,0 +1,73 @@
+//Colors
+$transparent: transparent;
+$default: #404040;
+$gray: #848484;
+$white: #fff;
+$black: #000;
+$green: #008948;
+$red:#ff0000;
+$yellow : #fde940;
+$background-color : #F0F0F0;
+$header-bg: #3f4af5;
+$tab-bg:#444;
+$tab-color:#666666;
+$active-bg:#333333;
+$border-color:#515151;
+//client colors
+$client-primary-color:#fc584c;
+$client-secondary-color:#f74072;
+$active-color:#3f4af5;
+$active0color1:#c54930;
+$minus-color:#ff2c2c;
+$row-color:#f5f6fe;
+$li-text:#2c2c2c;
+$client-complementary-color:#1d0c49;
+$client-deactive-color:#b5b9bb;
+$green1:#90c441;
+$active2-color:#232ba5;
+$tab-wrapcolor:#e4e5f3;
+$select-color:#5b5b5b;
+$left-color:#f5f5f5;
+//icons color
+$substitute-up:#66cc33;
+$substitute-down:#b4181e;
+$scrollbar-color:#e5e7ff;
+
+// social icons
+$googlePlus:#dd4b39;
+$facebook:#3b5998;
+$twitter:#1da1f2;
+$whatsApp:#7ad06d;
+$instagram:#125688;
+
+//Media Breakpoints
+$media-mobile-ex-small-320: 320px;
+$media-mobile-small: 360px;
+$media-mobile-med: 375px;
+$media-mobile-small-max-380: 380px;
+$media-mobile-small-max-384:384px;
+$media-mobile-small-max-420: 420px;
+$media-mobile-small-max: 480px;
+$media-mobile-max-540: 540px;
+$media-mobile-max-568: 568px;
+$media-mobile-max-580: 580px;
+$media-mobile-max-600: 600px;
+$media-mobile-max-640: 640px;
+$media-mobile-max-680: 680px;
+$media-mobile-max-715:715px;
+$media-mobile-max: 767px; //Mobiles (Landscape)
+$media-tablet-min: 768px;
+$media-tablet-max-768:768px;
+$media-tablet-small-max : 812px; //for iphone10, vivov11 pro and one plus 6/6T @media screen and (min-width: 375px) and (max-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)
+$media-tablet-max: 992px; //Tablets, Ipads
+$media-desktop-max-1024: 1024px;
+$media-desktop-min: 1024px;
+$media-desktop-max: 1200px; 
+$media-laptop-max: 1280px;
+$media-laptop-min: 1280px; //Laptops, Desktops
+$media-laptop-max: 1366px;
+$media-ex-large-min: 1367px;
+$media-ex-large-max: 1441px;
+$media-ex-large-hd-max: 1601px;
+$media-xxlarge: 1900px;
+$media-xxlarge-min: 2000px;

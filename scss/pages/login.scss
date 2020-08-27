@@ -1,0 +1,591 @@
+@import "../_variables.scss";
+@import "../_variables-en.scss";
+
+.si-login { 
+
+    &__page {
+        height: 100vh;
+
+        background: url(../images/login-bg.jpg) $white;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @include background-size(cover);
+        @media screen and (max-width:$media-mobile-med) {
+            height: 100vh;
+          }
+//   @media screen and (max-width:$media-mobile-small-max) {
+//          height: 630px;
+//     }
+  
+        // @include border-radius(0px 50% 50% 0px);
+        &::before {
+            display: none;
+        }
+
+        .si-main__container {
+            margin-bottom: 0px;
+            @include flexbox;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+                    
+    @media screen and (max-width:$media-tablet-max) {
+        max-width: 931px;
+    } 
+    @media screen and (max-width:$media-mobile-small-max) {
+        padding-top: 102px;
+   }
+   @media screen and (max-width:  $media-mobile-max-580) {
+    max-width: 546px;
+  } 
+   @media screen and (max-width:$media-mobile-small-max-420) {
+    padding-top: 90px;
+}
+@media screen and (max-width:$media-mobile-med) {
+    padding-top:0px;
+}
+        }
+    }
+
+    &__form {
+        width: calc(100% - 20%);
+        height: 516px;
+        margin-left: auto;
+        background-color: #f2f2f2;
+        @include border-radius(26px 10px 10px 26px);
+        @include box-shadow(0px, 0px, 30px, 0px, rgba($black, 0.5));
+        @include flexbox;
+        align-items: center;
+        position: relative;
+
+        
+    @media screen and (max-width: $media-desktop-min) {
+        height: 509px;
+        width: calc(100% - 21%);
+    }
+    @media screen and (max-width: $media-tablet-max) {
+      height: 408px;
+    }
+    
+    // @media screen and (max-width:$media-tablet-small-max) {
+    //   height: 314px;
+    //   width: calc(100% - 25%);
+    //   margin-right: 15px;
+    // }
+    @media screen and (max-width: $media-mobile-max) {
+      width: calc(100% - 23%);
+      margin-right: 18px;
+      height: 363px;
+    }
+    @media screen and (max-width:$media-mobile-max-715) {
+  
+      height: 329px;
+    } 
+  
+   
+    @media screen and (max-width: $media-mobile-max-680) {
+      
+      height: 315px;
+    } 
+   
+    @media screen and (max-width:  $media-mobile-max-580) {
+      height: 278px;
+    } 
+    @media screen and (max-width:$media-mobile-max-540) {
+        height: 269px;
+    }
+    
+    @media screen and (max-width: $media-mobile-small-max) {
+      @include flexbox;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      height: 440px;
+    }
+    @media screen and (max-width: $media-mobile-small-max-384) {
+      margin-top: 141px;
+    }
+    }
+
+    &__left {
+        overflow: hidden;
+        position: relative;
+        width: 50%;
+        height: 100%;
+        border-radius: 5%;
+        @media screen and (max-width:$media-tablet-max-768) {
+            width: 41%;
+          } 
+
+        @media screen and (max-width: $media-mobile-small-max) {
+            width: 100%;
+            height: 50%;
+          }
+          @media screen and (max-width:$media-mobile-ex-small-320) {
+            height: 30%;
+         }
+
+        &::before {
+            content: "";
+            width: 530px;
+            height: 600px;
+            @include border-radius(0% 50% 50% 0%);
+            position: absolute;
+            left: -50%;
+            top: 50%;
+            transform: translateY(-50%);
+            @media screen and (max-width: $media-tablet-max) {
+                width: 420px;
+                height: 450px;
+              } 
+              @media screen and (max-width:$media-tablet-small-max) {
+                left: -66%;
+        
+              }
+              @media screen and (max-width: $media-mobile-max) {
+                left: -51%;
+              }
+           
+              @media screen and (max-width: $media-mobile-max-680) {
+                left: -77%;
+              }
+              @media screen and (max-width:$media-mobile-max-600) {
+                left: -85%;
+              } 
+              @media screen and (max-width:  $media-mobile-max-580) {
+                left: -96%;
+              } 
+              @media screen and (max-width: $media-mobile-small-max) {
+                @include border-radius(0% 0% 50% 50%);
+                width: 100%;
+                left: 0;
+                background: $transparent;
+              }
+        }
+    }
+
+    &__Logo {
+        @include flexbox;
+        flex-flow: column;
+        align-items: center;
+        border-radius: 50%;
+        justify-content: center;
+        width: 519px;
+        height: 519px;
+        // @include linearGradient(-45deg, $client-secondary-color 0%, $client-primary-color 50%);
+        background-color: $active-color;
+        background-repeat: no-repeat;
+        @include background-size(cover);
+        @include box-shadow(-20px, 0px, 60px, 0px, rgba($black, 0.5));
+        z-index: 1;
+        position: absolute;
+        left: -26%;
+        top: 0px;
+        @media screen and (max-width: $media-tablet-max) {
+            width: 419px;
+            height: 419px;
+          } 
+          @media screen and (max-width:$media-desktop-max-1024) {
+            top: -2px;
+          } 
+          @media screen and (max-width:$media-tablet-max-768) {
+            top: -4px;
+          } 
+        //   @media screen and (max-width:$media-tablet-small-max) {
+        //     width: 323px;
+        //     height: 323px;
+        //   }
+          @media screen and (max-width: $media-mobile-max) {
+            width: 377px;
+            height: 377px;
+          } 
+         
+          @media screen and (max-width: $media-mobile-max-680) {
+            width: 323px;
+            height: 323px;
+          } 
+          @media screen and (max-width:  $media-mobile-max-580) {
+            width: 283px;
+            height: 283px;
+          } 
+          @media screen and (max-width:$media-mobile-max-540) {
+            width: 270px;
+            height: 270px;
+        } 
+      
+          @media screen and (max-width:$media-mobile-small-max) {
+            left: 50%;
+            top: 0;
+            @include transform(translate(-50%, -50%));
+            width: 250px;
+            height: 250px;
+          }
+          @media screen and (max-width:$media-mobile-ex-small-320) {
+            width: 211px;
+            height: 211px;
+         }
+      
+
+        
+
+        & img {
+    //         width: 206px;
+    //         height: 229px; 
+                            
+    // @media screen and (max-width:$media-tablet-max) {
+    //     width: 197px;
+    //     height: 213px;
+    // }
+            @media screen and (max-width:$media-tablet-max) {
+                width: calc(100% - 53%);
+              }
+        
+              @media screen and (max-width: $media-mobile-max) {
+                width: calc(100% - 57%);
+                z-index: 1;
+              }
+              @media screen and (max-width:$media-mobile-small-max) {
+                width: calc(100% - 57%);
+                z-index: 1;
+              }  
+              @media screen and (max-width:  $media-mobile-max-580) {
+                width: calc(100% - 64%);
+              } 
+              @media screen and (max-width:$media-mobile-max-540) {
+                width: calc(100% - 65%);
+            }
+        }
+
+        & span {
+            font-size: 20px;
+            font-family: $medium_font-family;
+            font-weight: $medium_font-weight;
+            color: $white;
+            margin-top: 15px;
+            padding-top: 15px;
+            line-height: 1.4;
+            @include flexbox;
+            align-items: center;
+            justify-content: center;
+            width: 296px;
+            border-top: 1px solid $white;
+            @media screen and (max-width:$media-tablet-max-768) {
+                font-size: 17px;
+                width: 268px;
+              } 
+              @media screen and (max-width:  $media-mobile-max-580) {
+                width: 246px;
+              } 
+              @media screen and (max-width:$media-mobile-max-540) {
+                font-size: 15px;
+                width: 206px;
+            }
+            @media screen and (max-width:$media-mobile-ex-small-320) {
+                font-size: 12px;
+                width: 175px;
+             }
+          
+            
+    //   @media screen and (max-width:$media-mobile-small-max) {
+    //     font-size: 20px;
+    //   }
+
+            .si-text {
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    &__right {
+        width: 50%;
+        flex-basis: 50%;
+        height: calc(100% - 40%);
+        @media screen and (max-width:$media-tablet-max-768) {
+            width: 67%;
+            flex-basis: 67%;
+            padding-left: 59px;
+          } 
+        @media screen and (max-width:$media-tablet-small-max) {
+            height: calc(100% - 18%);
+          }
+          @media screen and (max-width:$media-mobile-max-580) {
+            height: calc(100% - 10%);
+            width: 97%;
+            flex-basis: 97%;
+        }
+      
+          @media screen and (max-width:$media-mobile-max-540) {
+            height: calc(100% - 10%);
+        }
+          @media screen and (max-width: $media-mobile-small-max) {
+            width: 100%;
+            flex-basis: 100%;
+            height: calc(100% - 40%);
+            padding: 20px;
+          } 
+    }
+
+    &__head {
+        @include flexbox;
+        flex-flow: column;
+        color: $client-primary-color;
+        margin-bottom: 30px;
+        @media screen and (max-width:$media-tablet-max-768) {
+            margin-bottom: 16px;
+          } 
+          @media screen and (max-width:$media-mobile-max-580) {
+            margin-bottom: 2px;
+        }
+          @media screen and (max-width:$media-mobile-max-540) {
+            margin-bottom: 6px;
+        }
+        @media screen and (max-width: $media-mobile-max) {
+            margin-left: 27px;
+          }
+      
+          @media screen and (max-width:$media-mobile-small-max) {
+            margin-bottom: 15px;
+            margin-left: 0px;
+          }
+      
+
+        .si-title {
+            font-family: $medium_font-family;
+            font-weight: $medium_font-weight;
+            color: $active-color;
+            font-size: 36px;
+            display: block;
+            margin-bottom: 10px;
+            @media screen and (max-width:$media-mobile-max-580) {
+                font-size: 31px;
+            }
+        }
+
+        .si-subtitle {
+            font-family: $medium_font-family;
+            font-weight: $medium_font-weight;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: $active-color;
+            @media screen and (max-width:$media-mobile-max-540) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &__input {
+        width: calc(100% - 40%);
+
+        @include flexbox;
+        flex-flow: column;
+        @media screen and (max-width:$media-tablet-max-768) {
+            width: calc(100% - 18%);
+          } 
+        @media screen and (max-width: $media-mobile-max) {
+            margin-left: 27px;
+          }
+      
+          @media screen and (max-width: $media-mobile-small-max) {
+            width: 100%;
+            margin-left:0px;
+          }
+
+        & input {
+            border: none;
+            box-sizing: border-box;
+            background: transparent;
+            color: rgba($black, 0.5);
+            height: 30px;
+            padding: 0px 25px 2px 5px;
+            border-bottom: 1px solid rgba($black, 0.5);
+            font-family: $medium_font-family;
+            font-weight: $medium_font-weight;
+
+            @include placeholder {
+                color: rgba($black, 0.5);
+            }
+
+            font-size: 16px;
+            width: 100%;
+            @media screen and (max-width: $media-mobile-small-max) {
+                height: 40px;
+                
+              }
+        }
+
+        .si-username {
+            position: relative;
+            margin-bottom: 15px;
+            @media screen and (max-width:$media-mobile-max-540) {
+                margin-bottom: 7px;
+            }
+
+            &::after {
+                content: "\e907";
+                font-family: "dashboard" !important;
+                font-size: 25px;
+                color: rgba($black, 0.5);
+                right: 0;
+                top: 0;
+                position: absolute;
+            }
+
+            /* .si-emailtext {
+                    position: absolute;
+                    top: 3px;
+                    right: 30px;
+                    color: rgba($black,0.5);
+                } */
+        }
+
+        .si-password {
+            position: relative;
+
+            &::after {
+                content: "\e906";
+                font-family: "dashboard" !important;
+                font-size: 25px;
+                color: rgba($black, 0.5);
+                right: 0;
+                top: 0;
+                position: absolute;
+            }
+        }
+
+        .si-forgetPass {
+            & a {
+                font-size: 14px;
+                font-family: $medium_font-family;
+                font-weight: $medium_font-weight;
+                color: $client-primary-color;
+                display: block;
+                text-align: right;
+                margin-top: 5px;
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 20%;
+        @include flexbox;
+        justify-content: flex-end;
+        align-items: center;
+        
+        @media screen and (max-width:$media-tablet-max) {
+            margin-top: 5%;
+        }
+        @media screen and (max-width:$media-tablet-max-768) {
+            margin-top: 1%;
+          } 
+        
+    @media screen and (max-width: $media-mobile-small-max) {
+        margin-top: 0%;
+        position: absolute;
+        // background: $login-bg-color;
+        width: 100%;
+        left: 50%;
+        bottom: -30px;
+        padding: 10px 18px;
+        width: calc(100% - 15%);
+        @include transform(translateX(-50%));
+        color: $white;
+        border-radius: 50px;
+      }
+
+        & span {
+            font-size: 19px;
+            font-family: $medium_font-family;
+            font-weight: $medium_font-weight;
+            color: $white;
+            flex: 1;
+            
+      @media screen and (max-width:$media-mobile-small-max) {
+        color: $white;
+      }
+        }
+
+        & input[type="submit"] {
+            border: none;
+            @include linearGradient(-45deg, $client-secondary-color 0%, $client-primary-color 50%);
+            @include border-radius(16px);
+            box-sizing: border-box;
+            color: $white;
+            position: relative;
+            width: 130px;
+            height: 30px;
+            cursor: pointer;
+            @include flexbox;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 10px;
+
+            &:focus {
+                @include box-shadow(0, 0, 0, 0.2em, rgba($client-complementary-color, 0.3));
+            }
+
+            &::after {
+                content: "\e904";
+                font-family: "cms" !important;
+                font-size: 26px;
+                color: $white;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    }
+}
+
+.si-forgetPassword {
+    max-width: 360px !important;
+    border-radius: 10px;
+
+    .si-popup-modal-bg {
+        max-width: 360px;
+    }
+
+    .si-popup-body {
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .si-alert {
+            &::after {
+                content: "\e915" !important;
+                background-color: $green;
+                @include border-radius(50%);
+                padding: 10px;
+                color: $white !important;
+                font-size: 40px !important;
+            }
+        }
+    }
+}
+
+.si-btn2 {
+    background: $active-color;
+    border: 0;
+    padding: 6px 20px;
+    cursor: pointer;
+    @media screen and (max-width:$media-mobile-small-max) {
+        width:100%;
+    }
+}
+
+.si-commonerror {
+    color: $red;
+    text-align: center;
+    padding-top: 20px;
+    font-family: $medium_font-family;
+    font-weight: $medium_font-weight;
+    @media screen and (max-width:$media-tablet-max-768) {
+        padding-top: 13px;
+      } 
+}

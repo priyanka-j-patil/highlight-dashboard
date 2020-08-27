@@ -1,0 +1,80 @@
+@import '../_variables.scss';
+@import '../_variables-en.scss';
+
+.si-toggleSwitch {
+    @include flexbox;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 0px 10px;
+    & label{
+        font-size: 14px;
+     
+        color:$white;
+        &:not(:last-child){
+            margin-right: 8px;
+        }
+        &.active{
+            color:$white;
+        }
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 15px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border: 1px solid $client-primary-color;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 0px;
+            bottom: -3px;
+            @include linearGradient(-45deg, $client-secondary-color 0%, $client-primary-color 50%);
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+
+    input {
+        &:checked+.slider {
+            background-color: $white;
+        }
+
+        &:focus+.slider {
+            box-shadow: 0 0 1px $white;
+        }
+
+        &:checked+.slider:before {
+            @include transform(translateX(21px));
+        }
+    }
+
+    .slider.round {
+        @include border-radius(34px);
+
+        &:before {
+            @include border-radius(50%);
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'dashboard';
+  src:  url('fonts/dashboard.eot?vr2xd3');
+  src:  url('fonts/dashboard.eot?vr2xd3#iefix') format('embedded-opentype'),
+    url('fonts/dashboard.ttf?vr2xd3') format('truetype'),
+    url('fonts/dashboard.woff?vr2xd3') format('woff'),
+    url('fonts/dashboard.svg?vr2xd3#dashboard') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="dashboard-"], [class*=" dashboard-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dashboard' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dashboard-positive:before {
+  content: "\e908";
+}
+.dashboard-negative:before {
+  content: "\e909";
+}
+.dashboard-logout:before {
+  content: "\e90a";
+}
+.dashboard-arrow:before {
+  content: "\e90b";
+}
+.dashboard-time:before {
+  content: "\e90c";
+}
+.dashboard-iconfinder_user_3936855:before {
+  content: "\e907";
+}
+.dashboard-iconfinder_icons_exit2_1564506-2:before {
+  content: "\e903";
+}
+.dashboard-iconfinder_jee-74_2180663:before {
+  content: "\e904";
+}
+.dashboard-iconfinder_key_115724:before {
+  content: "\e906";
+}
+.dashboard-iconfinder_outlined_tick_4280485:before {
+  content: "\e902";
+}
+.dashboard-iconfinder_square-check_226561:before {
+  content: "\e900";
+}
+.dashboard-iconfinder_electronic_16_4657497:before {
+  content: "\e901";
+}
+.dashboard-arrowDown:before {
+  content: "\e905";
+}
+.dashboard-key:before {
+  content: "\e914";
+}

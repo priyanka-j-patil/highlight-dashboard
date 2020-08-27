@@ -1,0 +1,177 @@
+@import "../_variables.scss";
+@import "../_variables-en.scss";
+
+.si-header {
+    @extend %flexbox;
+    flex-flow: column;
+    background-color: $header-bg;
+    margin-bottom: 20px;
+
+    &__top {
+        @extend %flexbox;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 168px;
+        padding: 11px 23px;
+
+        @media screen and (max-width:$media-tablet-max) {
+            height: 130px;
+        }
+
+        @media screen and (max-width:$media-mobile-max-680) {
+            height: 110px;
+        }
+
+        @media screen and (max-width:$media-mobile-max-540) {
+            padding: 11px 9px;
+        }
+
+        @media screen and (max-width:$media-mobile-small-max) {
+            height: 85px;
+        }
+
+        &Left {
+            @extend %flexbox;
+            align-items: center;
+            flex-basis: 50%;
+            justify-content: flex-start;
+
+            @media screen and (max-width:$media-mobile-max-680) {
+                flex-basis: 60%;
+            }
+
+            @media screen and (max-width:$media-mobile-max-640) {
+                flex-basis: 68%;
+            }
+
+            @media screen and (max-width:$media-mobile-max-580) {
+                flex-basis: 90%;
+            }
+
+            @media screen and (max-width:$media-mobile-max-540) {
+                flex-basis: 97%;
+            }
+
+            .si-header__logo {
+                @extend %flexbox;
+                align-items: center;
+                justify-content: flex-start;
+                border-right: 1px solid $white;
+                flex: 0 0 116px;
+
+                @media screen and (max-width:$media-mobile-max-580) {
+                    flex: 0 0 107px;
+                }
+
+                @media screen and (max-width:$media-mobile-small-max) {
+                    flex: 0 0 98px;
+                }
+
+                @media screen and (max-width:$media-mobile-small-max-420) {
+                    flex: 0 0 83px;
+                }
+
+                & img {
+                    @media screen and (max-width:$media-mobile-small-max-420) {
+                        max-width: 73px;
+                    }
+                }
+
+            }
+
+            .main-heading {
+                color: $white;
+                padding-left: 20px;
+                font-size: 16px;
+                font-family: $bold_font-family;
+                font-weight: $bold_font-weight;
+                // margin-bottom: -10px;
+                text-transform: uppercase;
+
+                @media screen and (max-width:$media-mobile-max-680) {
+                    padding-left: 16px;
+                }
+
+                @media screen and (max-width:$media-mobile-max-580) {
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width:$media-mobile-small-max) {
+                    padding-left: 10px;
+                    font-size: 12px;
+                }
+
+            }
+
+            .si-header__text {
+                margin-left: 20px;
+
+                @media screen and (max-width:$media-mobile-max-580) {
+                    flex: 0 0 107px;
+                }
+
+                & span {
+                    font-size: 18px;
+                    color: $white;
+
+                    line-height: 1;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &Right {
+            flex-basis: 50%;
+            @extend %flexbox;
+            justify-content: flex-end;
+            align-items: center;
+            height: 30px;
+
+            @media screen and (max-width:$media-mobile-max-580) {
+                flex-basis: 68%;
+            }
+
+            @media screen and (max-width:$media-mobile-small-max-420) {
+                flex-basis: 77%;
+            }
+
+            @media screen and (max-width:$media-mobile-small-max-380) {
+                flex-basis: 91%;
+            }
+
+            .si-btn {
+                height: 32px;
+                min-width: 214px;
+                background: $white;
+
+                font-size: 14px;
+                color: rgba($black, 0.7);
+                @include border-radius(4px);
+            }
+
+            .si-powerIcon {
+                cursor: pointer;
+
+                &::after {
+                    content: "\e90a";
+                    font-family: "dashboard" !important;
+                    font-size: 20px;
+                    color: $white;
+                }
+            }
+
+            .si-usertext {
+                font-family: $book_font-family;
+                font-weight: $book_font-weight;
+                font-size: 14px;
+                text-align: center;
+                color: $white;
+                padding: 0 10px;
+
+                @media screen and (max-width:$media-mobile-small-max) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

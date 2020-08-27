@@ -1,0 +1,218 @@
+@import '_variables.scss';
+@import '_variables-en.scss';
+.si-accordian {
+    &Box {
+        margin-bottom: 10px;
+        &.active {
+            .si-accordian {
+                &__bottom {
+                    opacity: 1;
+                    height: 400px;
+                    padding: 10px;
+                    background: $white;
+                }
+
+                &__top {
+                    &Left{
+                        font-family: $bold_font-family;
+                        font-weight: $bold_font-weight;
+                        color: $client-secondary-color;
+                    }
+                    &Right {
+                        .si-arrowDown {
+                            &::after {
+                                @include transform(translateY(-50%) rotate(180deg));
+                                -webkit-transition: transform 0.3s ease;
+                                -moz-transition: transform 0.3s ease;
+                                -ms-transition: transform 0.3s ease;
+                                -o-transition: transform 0.3s ease;
+                                transition: transform 0.3s ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .si-accordian {
+            &__top {
+                @include flexbox;
+                justify-content: space-between;
+                align-items: center;
+                height: 30px;
+                border-bottom: 1px solid $gray;
+                font-size: 14px;
+               
+                cursor: pointer;
+
+                &Left {
+                    flex: 1;
+                    color: $white;
+                    font-size: 14px;
+                    font-family: $medium_font-family;
+                    font-weight: $medium_font-weight;
+                    text-transform: uppercase;
+                }
+
+                &Right {
+                    flex: 0 0 25px;
+                    height: 25px;
+
+                    .si-arrowDown {
+                        cursor: pointer;
+
+                        &::after {
+                            content: "\e903";
+                            width: 100%;
+                            height: 100%;
+                            background: $client-secondary-color;
+                            color: $white;
+                            @include flexbox;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+                            -webkit-transition: transform 0.3s ease;
+                            -moz-transition: transform 0.3s ease;
+                            -ms-transition: transform 0.3s ease;
+                            -o-transition: transform 0.3s ease;
+                            transition: transform 0.3s ease;
+                        }
+
+                    }
+                }
+            }
+
+            &__bottom {               
+                opacity: 0;
+                height: 0px;
+                padding: 5px 0px;
+                -webkit-transition: height 0.3s ease, opacity 0.3s ease;
+                -moz-transition: height 0.3s ease, opacity 0.3s ease;
+                -ms-transition: height 0.3s ease, opacity 0.3s ease;
+                -o-transition: height 0.3s ease, opacity 0.3s ease;
+                transition: height 0.3s ease, opacity 0.3s ease;
+
+                .si-videoPlayer {
+                    border: 1px solid rgba($gray, 0.5);
+                    cursor: pointer;
+                }
+
+                .si-videoPlayerBox {
+                    flex: 0 0 25%;
+                    position: relative;
+                    padding: 0px 25px;
+                    margin-bottom: 40px;
+
+                }
+
+                .si-imgBox {
+                    overflow: hidden;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 100%;
+                    padding-bottom: 77%;
+                    position: relative;
+
+                    & img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+
+                .si-playIcon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    @include transform(translate(-50%, -50%));
+
+                    &::after {
+                        content: "\e900";
+                        font-size: 30px;
+                        padding: 5px;
+                        border: 1px solid $gray;
+                        color: $gray;
+                        @include border-radius(50%);
+                        cursor: pointer;
+                    }
+                }
+
+                .si-videoPlayerText {
+                    @include flexbox;
+                    justify-content: space-between;
+                    padding: 5px;
+                    background: #424242;
+                    min-height: 38px;
+                    align-items: center;
+                    color: $white;
+
+                    .si-left,
+                    .si-right {
+                        @include flexbox;
+                        justify-content: center;
+                        flex-flow: column;
+                    }
+
+                    .si-left {
+                        flex: 1;
+                        width: 100%;
+                        text-align: left;
+                        align-items: flex-start;
+                        margin-right: 5px;
+                    }
+
+                    .si-right {
+                        flex: 0 0 53px;
+                        width: 53px;
+                        text-align: right;
+                        align-items: flex-end;
+                    }
+
+                    .si-text,
+                    .si-palyertext {
+                        font-size: 14px;
+                        font-family: $regular_font-family;
+                        font-weight: $regular_font-weight;
+                        width: 100%;
+                    }
+
+                    .si-palyertext {
+                        @include flexbox;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-flow: row-reverse;
+
+                        em {
+                            &:first-child {
+                                flex: 1;
+                                white-space: nowrap;
+                                display: block;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                            }
+                        }
+
+                        .si-icon {
+                            flex: 0 0 20px;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .si-time {
+                        font-size: 14px;
+                        font-family: $regular_font-family;
+                        font-weight: $regular_font-weight;
+                        width: 100%;
+
+                        & em {
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
